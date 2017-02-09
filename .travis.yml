@@ -1,0 +1,21 @@
+sudo: required
+
+services:
+  - docker
+
+branches:
+  only:
+    - master
+
+env:
+  - TAG=$(echo ${TRAVIS_BRANCH} | sed 's/[^0-9A-Za-z]/_/g')
+
+before_script:
+  - docker login -u=${DOCKER_USER} -p=${DOCKER_PASS}
+
+script:
+  - docker build -t base .
+  - docker tag base gypsydiver/golang-base:${TAG}
+  - docker tag base gypsydiver/golang-base:latest
+  - docker push gypsydiver/golang-base:${TAG}
+  - docker push gypsydiver/golang-base:latest
