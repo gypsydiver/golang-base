@@ -1,4 +1,4 @@
-https://travis-ci.org/gypsydiver/golang-base.svg?branch=master
+[![Build Status](https://travis-ci.org/gypsydiver/golang-base.svg?branch=master)](https://travis-ci.org/gypsydiver/golang-base)
 # golang-base
 Base image that includes golang 1.7.4 and a functional protobuf compiler
 
