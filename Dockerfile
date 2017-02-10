@@ -1,7 +1,7 @@
 FROM golang:1.7.5-alpine
 MAINTAINER Fernando Mendoza <fernando@agavelab.com>
 
-ARG PROTOBUF_VER=3.1.0
+ARG PROTOBUF_VER=3.2.0
 
 RUN apk add -U autoconf automake bash curl g++ gcc git libtool make \
 	&& curl -#L https://github.com/google/protobuf/archive/v${PROTOBUF_VER}.zip >> ${PROTOBUF_VER}.zip \
