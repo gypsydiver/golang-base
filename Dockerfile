@@ -1,4 +1,4 @@
-FROM golang:1.7.4-alpine
+FROM golang:1.7.5-alpine
 MAINTAINER Fernando Mendoza <fernando@agavelab.com>
 
 ARG PROTOBUF_VER=3.1.0
