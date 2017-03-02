@@ -15,3 +15,4 @@ RUN apk add -U autoconf automake bash curl g++ gcc git libtool make \
 	&& apk del autoconf automake libtool \
 	&& cd $GOPATH \
 	&& rm -rf ${PROTOBUF_VER}.zip protobuf-${PROTOBUF_VER}
+	&& curl https://glide.sh/get | sh
